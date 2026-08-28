@@ -12,12 +12,13 @@
   "exports": "./dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "integrity": "node scripts/print-integrity.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "validate:artifact": "node scripts/validate-artifact.mjs",
     "validate": "npm run typecheck && npm run validate:artifact"
   },
   "devDependencies": {
-    "@tessel-la/roboboy-panel-sdk": "^1.0.0",
+    "@tessel-la/roboboy-panel-sdk": "file:../robo-boy/panel-sdk",
     "typescript": "^5.2.2"
   }
 }

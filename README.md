@@ -14,23 +14,32 @@ scripts/validate-artifact.mjs
 
 ## Develop
 
-Install the published type-only SDK and build:
+Install dependencies and build:
 
 ```bash
 npm install
 npm run build
+npm run integrity
 npm run validate
 ```
 
-The SDK is imported with `import type`, so it contributes no runtime code. `dist/index.js` has no bare imports and
-can be loaded directly by a browser or Tauri webview.
+The SDK is imported with `import type`, so it contributes no runtime code. Until the SDK package is published,
+point its development dependency at Robo-Boy's local `panel-sdk/` directory. `dist/index.js` has no bare imports
+and can be loaded directly by a browser or Tauri webview.
+
+After any bundle change, copy the value printed by `npm run integrity` into `roboboy.panel.json`. Validation checks
+that hash as well as the module ID, API version, activation function, and required mount/unmount lifecycle.
 
 ## Publish
 
-Create a release containing `roboboy.panel.json` and `dist/index.js`, then add or update this panel's metadata in
-the separate Robo-Boy Panel Inventory repository. Installation copies the artifact into a Robo-Boy deployment's
-same-origin `panels/` directory and adds the manifest to `panels/installed.json`.
+Create an immutable release containing `roboboy.panel.json` and `dist/index.js`, then add or update this panel's
+metadata and integrity value in the separate Robo-Boy Panel Inventory repository. Installation copies the
+artifact into a versioned Robo-Boy path such as `panels/hello-panel/1.0.0/index.js` and adds the installed
+manifest to `panels/installed.json`.
 
 The declared `storage` capability gives this example a host-namespaced JSON store. The greeting counter
 demonstrates that state survives panel remounts and workspace export/import without direct access to Robo-Boy's
 internal stores.
+
+This directory is a workspace prototype. The repository/package names describe the intended publication shape;
+they do not imply that a public npm package or GitHub release already exists.
