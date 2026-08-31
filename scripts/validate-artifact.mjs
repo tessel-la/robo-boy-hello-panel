@@ -30,7 +30,7 @@ if (integrity !== manifest.integrity) {
 if (
   !module.default ||
   module.default.id !== manifest.id ||
-  module.default.apiVersion !== "1.0.0"
+  module.default.apiVersion !== "2.0.0"
 ) {
   throw new Error("The built module does not match roboboy.panel.json.");
 }

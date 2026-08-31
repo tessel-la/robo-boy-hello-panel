@@ -38,12 +38,16 @@ needed only for a published remote installation.
 
 Create an immutable release containing `roboboy.panel.json` and `dist/index.js`, then add or update this panel's
 metadata and integrity value in the separate Robo-Boy Panel Inventory repository. Installation copies the
-artifact into a versioned Robo-Boy path such as `panels/la.tessel.roboboy.hello/1.0.0/index.js` and adds the
+artifact into a versioned Robo-Boy path such as `panels/la.tessel.roboboy.hello/2.0.0/index.js` and adds the
 installed manifest to `panels/installed.json`.
 
 The declared `storage` capability gives this example a host-namespaced JSON store. The greeting counter
 demonstrates that state survives panel remounts and workspace export/import without direct access to Robo-Boy's
 internal stores.
+
+Robo-Boy runs the bundle in an opaque-origin iframe. The panel receives only its declared storage service plus
+curated lifecycle, viewport, and connection snapshots; it cannot access the parent DOM, Robo-Boy local storage,
+cookies, or undeclared host services.
 
 The panel and Panel SDK are independently versioned. Publishing a panel release does not publish the panel to npm;
 the release artifact and inventory catalog are the remote installation contract.

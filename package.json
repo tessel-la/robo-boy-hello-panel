@@ -1,6 +1,6 @@
 {
   "name": "@tessel-la/roboboy-hello-panel",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Minimal standalone external panel for Robo-Boy",
   "type": "module",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "validate": "npm run typecheck && npm run validate:artifact"
   },
   "devDependencies": {
-    "@tessel-la/roboboy-panel-sdk": "https://github.com/tessel-la/robo-boy/releases/download/panel-sdk-v1.0.0/tessel-la-roboboy-panel-sdk-1.0.0.tgz",
+    "@tessel-la/roboboy-panel-sdk": "https://github.com/tessel-la/robo-boy/releases/download/panel-sdk-v2.0.0/tessel-la-roboboy-panel-sdk-2.0.0.tgz",
     "typescript": "^5.2.2"
   }
 }

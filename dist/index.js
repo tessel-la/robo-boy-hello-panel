@@ -78,7 +78,7 @@ const activate = (context) => {
     };
 };
 const definition = {
-    apiVersion: "1.0.0",
+    apiVersion: "2.0.0",
     id: "la.tessel.roboboy.hello",
     activate,
 };

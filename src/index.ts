@@ -103,7 +103,7 @@ const activate = (context: RoboBoyPanelContext) => {
 };
 
 const definition: RoboBoyPanelDefinition = {
-  apiVersion: "1.0.0",
+  apiVersion: "2.0.0",
   id: "la.tessel.roboboy.hello",
   activate,
 };
