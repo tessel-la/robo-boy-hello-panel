@@ -30,6 +30,7 @@ const activate = (context) => {
                 padding: "24px",
                 color: "var(--text-color, #f5f7fb)",
                 background: "linear-gradient(145deg, var(--background-secondary, #252b35), var(--card-bg, #1f242d))",
+                fontFamily: "var(--font-family-ui, system-ui, sans-serif)",
             });
             const content = createElement("div", "roboboy-hello-panel__content");
             Object.assign(content.style, { maxWidth: "420px", textAlign: "center" });
@@ -54,7 +55,7 @@ const activate = (context) => {
                 padding: "9px 16px",
                 border: "0",
                 borderRadius: "7px",
-                color: "#fff",
+                color: "var(--button-text-color, #fff)",
                 background: "var(--primary-color, #3b82f6)",
                 cursor: "pointer",
                 fontWeight: "700",

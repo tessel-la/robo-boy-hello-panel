@@ -5,7 +5,7 @@
   "description": "A minimal external panel that demonstrates the Robo-Boy panel lifecycle.",
   "version": "2.0.0",
   "entryPoint": "./dist/index.js",
-  "integrity": "sha256-4XuM2MSS/LUeZ11JjAP6hAZ3VZbirMmV1mRJzbZDYnE=",
+  "integrity": "sha256-g9HqGT5s5tI+xSqy8jNHcmY17Rz2GPoorSXW/E8ZN34=",
   "compatibility": {
     "panelApi": "^2.0.0",
     "roboboy": ">=0.3.0-0 <1.0.0"
